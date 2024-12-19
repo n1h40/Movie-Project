@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  background: yellow;
+  color: black;
+  padding: 30px;
+  border: 2px solid black;
+}
+
+.basket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7faff;
+  min-height: calc(100vh - 88px);
+}
+
+.basket .basket-container {
+  width: 90%;
+  max-width: 1200px;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.basket .basket-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.basket .basket-container .basket-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 50px
+  ;
+}
+
+.basket .basket-container .basket-rows .basket-empty {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #777;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.basket .basket-container .basket-rows .basket-orders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  margin: 1.5rem 0;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border: 2px solid black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.26);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order div {
+  padding-left: 0.5rem;
+  flex-grow: 1;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order div p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order div span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order a {
+  padding: 10px;
+  text-decoration: none;
+  color: #007bff;
+  display: flex;
+}
+
+.basket .basket-container .basket-rows .basket-orders .basket-order a:hover {
+  text-decoration: underline;
+}
+
+.basket button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  background: yellow;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.basket button:hover {
+  transform: scale(1.05);
+  background: #ffdb4d;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 2rem 0;
+  gap: 50px;
+}
+
+.container .container-left .container-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+}
+
+.container .container-right .list {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid black;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 1.5rem;
+}
+
+.movie-card {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  background: linear-gradient(135deg, #ffffff, #f4f4f9);
+  border: 2px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.movie-card .card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.movie-card .card-content .card-texts span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.movie-card .card-content .card-texts p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.movie-card .card-content .card-buttons button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  background: yellow;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+button {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 0px 5px;
+  font-size: 1.1em;
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  background-color: #ffdb4d;
+  transform: scale(1.05);
+}
+
+input {
+  padding: 10px;
+  font-size: 1.1em;
+  margin: 5px 0px;
+  border: 2px solid black;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+}
